@@ -1,4 +1,5 @@
 database-docker-up:
+
 	docker run -d --rm -e MONGO_INITDB_ROOT_USERNAME=productListUser -e MONGO_INITDB_ROOT_PASSWORD=productListPassword -p 27017:27017 --name mongodb-local -v "$(shell pwd)/database":/database mongo:3.6.8
 
 database-provision:

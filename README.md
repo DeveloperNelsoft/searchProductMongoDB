@@ -1,16 +1,13 @@
-# Lider Challenge
+# Search product Mongo DB
 
-# Welcome!
-
-We really appreciate your interest in this challenge and we hope you have some good time with this ;)!
+data source for Search product back end app.
 
 ### Installation
 
-If you want to set the mongodb and import the products to start with the challenge, use this command:
+If you want to set the mongodb and import the products to start to consume, use this command:
 ```sh
 $ make database-up
 ```
-
 If you only want to run the mongodb image, use this one:
 ```sh
 $ make database-docker-up
@@ -31,5 +28,3 @@ If you want to reset the container:
 ```sh
 $ make database-reset
 ```
-
-Anything else?, you are always welcome to have a look at the Makefile ;)
