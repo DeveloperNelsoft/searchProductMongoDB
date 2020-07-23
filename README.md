@@ -22,9 +22,9 @@ docker ps (get container id hash)
 
 docker exec -it "container id de container mongodb-local" bash
 
-mongo --port 27017 -u productListUser -p productListPassword --authenticationDatabase promotions
+mongo --port 27017 -u productListUser -p productListPassword --authenticationDatabase admin
 
-db.createUser({user:'productListUser', pwd:'productListPassword',roles:[{role:'userAdminAnyDatabase',db:'promotions'}]})
+db.createUser({user:'productListUser',pwd:'productListPassword',roles:[{role:'readWrite',db:'promotions'}]})
 
 ```
 
