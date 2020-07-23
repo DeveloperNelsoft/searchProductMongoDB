@@ -11,7 +11,23 @@ $ make database-up
 If you only want to run the mongodb image, use this one:
 ```sh
 $ make database-docker-up
+
 ```
+
+In mongo db, we must consider:
+
+Go to docker container: mongodb-local db admin, and create role to promotions db user
+
+docker ps (get container id hash)
+
+docker exec -it "container id de container mongodb-local" bash
+
+mongo --port 27017 -u productListUser -p productListPassword --authenticationDatabase promotions
+
+db.createUser({user:'productListUser', pwd:'productListPassword',roles:[{role:'userAdminAnyDatabase',db:'promotions'}]})
+
+```
+
 
 If you only want to import the products in the running mongodb image, use this:
 ```sh
